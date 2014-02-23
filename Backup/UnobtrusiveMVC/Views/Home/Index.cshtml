@@ -1,0 +1,67 @@
+﻿@model UnobtrusiveMVC.Models.Boat
+@{
+    Page.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    
+    <fieldset>
+    @Html.ValidationSummary(true)
+    
+    <span class="field-validation-valid" data-valmsg-for="ManualField" data-valmsg-replace="true"></span>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.BoatName) 
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.BoatName) @Html.ValidationMessageFor(model => model.BoatName)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.CaptainName)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.CaptainName) @Html.ValidationMessageFor(model => model.CaptainName)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.CaptainSaltinessPercent)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.CaptainSaltinessPercent) @Html.ValidationMessageFor(model => model.CaptainSaltinessPercent)
+    </div>
+    <div class="editor-label">
+        Custom HTML Field
+    </div>
+    <div class="editor-field">
+        <input data-val="true" data-val-length="Too long." data-val-regex-pattern="David.*" data-val-regex="Your ManualField must start with David." data-val-length-max="10" data-val-required="Custom Field Is required." id="ManualField" name="ManualField" type="text" value="" />
+    </div>
+    
+    <input type="submit" value="Save"></fieldset>
+}
+
+@*These are custom styles that changes out the error messages appear.*@
+<style type="text/css">
+.callout {
+	padding: 5px;
+}
+.callout.red {
+	border: 1px solid #EC2828;
+	background-color: #8D1010;
+	color: white;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: 		4px 4px 4px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 	4px 4px 4px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+</style>
+<script language="javascript">
+    $(document).ready(function () {
+        $("#BoatName").shake();
+    });
+</script>

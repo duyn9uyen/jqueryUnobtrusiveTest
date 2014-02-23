@@ -1,0 +1,10 @@
+C:\Users\dstudio\Documents\Visual Studio 2010\Projects\UnobtrusiveMVC\UnobtrusiveMVC\bin\UnobtrusiveMVC.dll
+C:\Users\dstudio\Documents\Visual Studio 2010\Projects\UnobtrusiveMVC\UnobtrusiveMVC\bin\UnobtrusiveMVC.pdb
+C:\Users\dstudio\Documents\Visual Studio 2010\Projects\UnobtrusiveMVC\UnobtrusiveMVC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dstudio\Documents\Visual Studio 2010\Projects\UnobtrusiveMVC\UnobtrusiveMVC\obj\Debug\UnobtrusiveMVC.dll
+C:\Users\dstudio\Documents\Visual Studio 2010\Projects\UnobtrusiveMVC\UnobtrusiveMVC\obj\Debug\UnobtrusiveMVC.pdb
+C:\HDBackup\Developer Resources\Git-Repositories\remote\jqueryUnobtrusiveTest\UnobtrusiveMVC\bin\UnobtrusiveMVC.dll
+C:\HDBackup\Developer Resources\Git-Repositories\remote\jqueryUnobtrusiveTest\UnobtrusiveMVC\bin\UnobtrusiveMVC.pdb
+C:\HDBackup\Developer Resources\Git-Repositories\remote\jqueryUnobtrusiveTest\UnobtrusiveMVC\obj\Debug\UnobtrusiveMVC.csprojResolveAssemblyReference.cache
+C:\HDBackup\Developer Resources\Git-Repositories\remote\jqueryUnobtrusiveTest\UnobtrusiveMVC\obj\Debug\UnobtrusiveMVC.dll
+C:\HDBackup\Developer Resources\Git-Repositories\remote\jqueryUnobtrusiveTest\UnobtrusiveMVC\obj\Debug\UnobtrusiveMVC.pdb

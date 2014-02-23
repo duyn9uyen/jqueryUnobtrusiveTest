@@ -1,0 +1,44 @@
+﻿@inherits System.Web.Mvc.WebViewPage<System.Int32>
+@Html.HiddenFor(model => model)
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:75px"><div id="CaptainSaltinessPercentText">@Model.ToString() %</div></td>
+<td style="width:400px"><div id="CaptainSaltinessPercent_Disp"></div></td>
+</tr>
+</tbody>
+</table>
+
+<script language="javascript">
+    $(function () {
+        @{
+            int MinValue = 0;
+            int MaxValue = 200;
+            foreach (var r in @ViewData.ModelMetadata.GetValidators(this.ViewContext))
+            {
+                if (r.GetType() == typeof(System.Web.Mvc.RangeAttributeAdapter))
+                {
+                    foreach (ModelClientValidationRule mcvr in ((System.Web.Mvc.RangeAttributeAdapter)r).GetClientValidationRules())
+                    {
+                        MinValue=(int)mcvr.ValidationParameters["min"];
+                        MaxValue=(int)mcvr.ValidationParameters["max"];
+                    }
+                }
+            }
+        }
+        var MinValue = @MinValue;
+        var MaxValue = @MaxValue;
+
+        var myRef = "@ViewData.ModelMetadata.PropertyName";
+        $("#"+ myRef +"_Disp").slider({
+            value: @Model.ToString(),
+            min: MinValue,
+            max: MaxValue,
+            step: 5,
+            slide: function (event, ui) {
+                $("#"+ myRef).val(ui.value);
+                $("#"+ myRef +"Text").html(ui.value +"%");
+            }
+        });
+    });
+</script>
